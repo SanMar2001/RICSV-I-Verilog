@@ -1,0 +1,146 @@
+$date
+	Sat May 11 19:02:31 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module alu_tb $end
+$var wire 32 ! xor_result [31:0] $end
+$var wire 32 " unsigned_compare_result [31:0] $end
+$var wire 32 # sub_result [31:0] $end
+$var wire 32 $ srlsra_result [31:0] $end
+$var wire 32 % signed_shift_right_result [31:0] $end
+$var wire 32 & signed_compare_result [31:0] $end
+$var wire 32 ' shift_right_result [31:0] $end
+$var wire 32 ( shift_left_result [31:0] $end
+$var wire 32 ) out [31:0] $end
+$var wire 32 * or_result [31:0] $end
+$var wire 1 + func7_result $end
+$var wire 32 , and_result [31:0] $end
+$var wire 32 - addsub_result [31:0] $end
+$var wire 32 . add_result [31:0] $end
+$var reg 3 / func3_tb [2:0] $end
+$var reg 7 0 func7_tb [6:0] $end
+$var reg 32 1 op1_tb [31:0] $end
+$var reg 32 2 op2_tb [31:0] $end
+$scope module dut $end
+$var wire 3 3 func3 [2:0] $end
+$var wire 7 4 func7 [6:0] $end
+$var wire 32 5 op1 [31:0] $end
+$var wire 32 6 op2 [31:0] $end
+$var reg 32 7 add_result [31:0] $end
+$var reg 32 8 addsub_result [31:0] $end
+$var reg 32 9 and_result [31:0] $end
+$var reg 1 + func7_result $end
+$var reg 32 : or_result [31:0] $end
+$var reg 32 ; out [31:0] $end
+$var reg 32 < shift_left_result [31:0] $end
+$var reg 32 = shift_right_result [31:0] $end
+$var reg 32 > signed_compare_result [31:0] $end
+$var reg 32 ? signed_shift_right_result [31:0] $end
+$var reg 32 @ srlsra_result [31:0] $end
+$var reg 32 A sub_result [31:0] $end
+$var reg 32 B unsigned_compare_result [31:0] $end
+$var reg 32 C xor_result [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1111 C
+b0 B
+b101 A
+b0 @
+b0 ?
+b0 >
+b0 =
+b101000000 <
+b1111 ;
+b1111 :
+b0 9
+b1111 8
+b1111 7
+b101 6
+b1010 5
+b0 4
+b0 3
+b101 2
+b1010 1
+b0 0
+b0 /
+b1111 .
+b1111 -
+b0 ,
+0+
+b1111 *
+b1111 )
+b101000000 (
+b0 '
+b0 &
+b0 %
+b0 $
+b101 #
+b0 "
+b1111 !
+$end
+#10000
+b101 )
+b101 ;
+b101 -
+b101 8
+1+
+b100000 0
+b100000 4
+#20000
+b101000000 )
+b101000000 ;
+b1111 -
+b1111 8
+0+
+b0 0
+b0 4
+b1 /
+b1 3
+#30000
+b0 )
+b0 ;
+b10 /
+b10 3
+#40000
+b11 /
+b11 3
+#50000
+b1111 )
+b1111 ;
+b100 /
+b100 3
+#60000
+b0 )
+b0 ;
+b101 /
+b101 3
+#70000
+b1111 )
+b1111 ;
+b110 /
+b110 3
+#80000
+b0 )
+b0 ;
+b111 /
+b111 3
+#90000
+b101 -
+b101 8
+1+
+b100000 0
+b100000 4
+b101 /
+b101 3
+#100000

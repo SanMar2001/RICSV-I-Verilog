@@ -1,0 +1,166 @@
+$date
+	Sun May 12 18:15:00 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module dmemory_tb $end
+$var wire 32 ! out [31:0] $end
+$var wire 8 " mux_byte3 [7:0] $end
+$var wire 8 # mux_byte2 [7:0] $end
+$var wire 8 $ mux_byte1 [7:0] $end
+$var wire 8 % mux_byte0 [7:0] $end
+$var wire 1 & lword $end
+$var wire 1 ' lhalf $end
+$var wire 1 ( lbyte $end
+$var wire 8 ) byte3 [7:0] $end
+$var wire 8 * byte2 [7:0] $end
+$var wire 8 + byte1 [7:0] $end
+$var wire 8 , byte0 [7:0] $end
+$var reg 32 - addr [31:0] $end
+$var reg 1 . clk $end
+$var reg 1 / dmwen $end
+$var reg 3 0 func3 [2:0] $end
+$var reg 32 1 wdata [31:0] $end
+$scope module dut $end
+$var wire 32 2 addr [31:0] $end
+$var wire 1 . clk $end
+$var wire 1 / dmwen $end
+$var wire 3 3 func3 [2:0] $end
+$var wire 32 4 wdata [31:0] $end
+$var reg 8 5 byte0 [7:0] $end
+$var reg 8 6 byte1 [7:0] $end
+$var reg 8 7 byte2 [7:0] $end
+$var reg 8 8 byte3 [7:0] $end
+$var reg 1 ( lbyte $end
+$var reg 1 ' lhalf $end
+$var reg 1 & lword $end
+$var reg 8 9 mux_byte0 [7:0] $end
+$var reg 8 : mux_byte1 [7:0] $end
+$var reg 8 ; mux_byte2 [7:0] $end
+$var reg 8 < mux_byte3 [7:0] $end
+$var reg 32 = out [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx =
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+bx 5
+b100010001000101110000 4
+b10 3
+b0 2
+b100010001000101110000 1
+b10 0
+1/
+0.
+b0 -
+bx ,
+bx +
+bx *
+bx )
+x(
+x'
+x&
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#1
+1(
+1'
+1&
+1.
+#2
+0.
+#3
+b100010001000101110000 !
+b100010001000101110000 =
+b0 "
+b0 <
+b10001 #
+b10001 ;
+b10001 $
+b10001 :
+b1110000 %
+b1110000 9
+b0 )
+b0 8
+b10001 *
+b10001 7
+b10001 +
+b10001 6
+b1110000 ,
+b1110000 5
+1.
+#4
+0.
+#5
+b0xxxxxxxx !
+b0xxxxxxxx =
+b0 #
+b0 ;
+b0 $
+b0 :
+bx %
+bx 9
+bx )
+bx 8
+bx *
+bx 7
+bx +
+bx 6
+bx ,
+bx 5
+0'
+0&
+1.
+b1100 1
+b1100 4
+b1 -
+b1 2
+b0 0
+b0 3
+0/
+#6
+0.
+#7
+1.
+#8
+0.
+#9
+1.
+#10
+0.
+1/
+#11
+1.
+#12
+0.
+#13
+b1100 !
+b1100 =
+b1100 %
+b1100 9
+b1100 ,
+b1100 5
+1.
+#14
+0.
+#15
+1.

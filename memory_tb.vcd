@@ -1,0 +1,51 @@
+$date
+	Sat May 11 15:41:34 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module memory_tb $end
+$var wire 32 ! data_out [31:0] $end
+$var parameter 32 " ADDR_WIDTH $end
+$var reg 32 # address [31:0] $end
+$scope module dut $end
+$var wire 32 $ address [31:0] $end
+$var reg 32 % data_out [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100000 "
+$end
+#0
+$dumpvars
+bx %
+bx $
+bx #
+bx !
+$end
+#10000
+b1000001011000110101001010010011 !
+b1000001011000110101001010010011 %
+b0 #
+b0 $
+#15000
+b1000001100100001101001110010011 !
+b1000001100100001101001110010011 %
+b1 #
+b1 $
+#20000
+b1000001111100010101001010010011 !
+b1000001111100010101001010010011 %
+b10 #
+b10 $
+#25000
+b1000000001101001101010000010011 !
+b1000000001101001101010000010011 %
+b11 #
+b11 $
+#40000
