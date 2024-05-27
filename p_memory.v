@@ -13,7 +13,10 @@ module memory (
 
     // Acceso a la ROM
     always @(*) begin
-        data_out = memory[address];
+        data_out[31:24] = memory[address];
+        data_out[23:16] = memory[address+1];
+        data_out[15:8] = memory[address+2];
+        data_out[7:0] = memory[address+3];
     end
 
 endmodule
