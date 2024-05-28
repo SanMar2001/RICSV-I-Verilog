@@ -1,0 +1,76 @@
+$date
+	Sat May 11 18:48:10 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module control_tb $end
+$var wire 2 ! wbsel [1:0] $end
+$var wire 1 " useDM $end
+$var wire 1 # rfwenable $end
+$var wire 1 $ jaljalr $end
+$var wire 1 % dmwenable $end
+$var wire 1 & brinst $end
+$var wire 1 ' Immreg $end
+$var reg 32 ( instr [31:0] $end
+$scope module dut $end
+$var wire 32 ) instr [31:0] $end
+$var wire 1 # rfwenable $end
+$var wire 1 " useDM $end
+$var wire 1 $ jaljalr $end
+$var wire 1 % dmwenable $end
+$var wire 1 & brinst $end
+$var wire 1 ' Immreg $end
+$var reg 2 * wbsel [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 *
+b11111111000000010000000100010011 )
+b11111111000000010000000100010011 (
+1'
+0&
+0%
+0$
+1#
+0"
+b0 !
+$end
+#100
+0#
+1%
+b100010010010000100011 (
+b100010010010000100011 )
+#200
+1#
+0%
+b10000000000000000010100010111 (
+b10000000000000000010100010111 )
+#300
+0#
+1&
+b101101100001100011 (
+b101101100001100011 )
+#400
+b10 !
+b10 *
+1$
+1#
+0&
+b1000000001100111 (
+b1000000001100111 )
+#500
+0$
+b1 !
+b1 *
+1"
+b10010010100000011 (
+b10010010100000011 )

@@ -1,22 +1,22 @@
 module immunit (
     input [31:0] inst,
-    output reg [6:0] opcode,
-    output reg [2:0] func3,
-    output reg [31:0] shamt,
-    output reg shamflag,
-    output reg [31:0] immi,
-    output reg [31:0] imms,
-    output reg [31:0] immb,
-    output reg [31:0] immu,
-    output reg [31:0] immj,
-    output reg normal_i,
-    output reg special_i,
-    output reg [31:0] imm,
-    output reg types,
-    output reg typeb,
-    output reg typeu,
-    output reg typej
+    output reg [31:0] imm
 );
+    reg [6:0] opcode;
+    reg [2:0] func3;
+    reg [31:0] shamt;
+    reg shamflag;
+    reg [31:0] immi;
+    reg [31:0] imms;
+    reg [31:0] immb;
+    reg [31:0] immu;
+    reg [31:0] immj;
+    reg normal_i;
+    reg special_i;
+    reg types;
+    reg typeb;
+    reg typeu;
+    reg typej;
 
     always @* begin
         opcode = inst[6:0];

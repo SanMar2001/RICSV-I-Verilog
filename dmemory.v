@@ -4,17 +4,6 @@ module dmemory (
     input [31:0] wdata,
     input dmwen,
     input [31:0] addr,
-    output reg [7:0] byte0,
-    output reg [7:0] byte1,
-    output reg [7:0] byte2,
-    output reg [7:0] byte3,
-    output reg [7:0] mux_byte0,
-    output reg [7:0] mux_byte1,
-    output reg [7:0] mux_byte2,
-    output reg [7:0] mux_byte3,
-    output reg lbyte,
-    output reg lhalf,
-    output reg lword,
     output reg [31:0] out      // Datos de salida
 );
 
@@ -22,6 +11,18 @@ reg [7:0] memory0 [0:(1<<24)-1];
 reg [7:0] memory1 [0:(1<<24)-1];
 reg [7:0] memory2 [0:(1<<24)-1];
 reg [7:0] memory3 [0:(1<<24)-1];
+
+reg [7:0] byte0;
+reg [7:0] byte1;
+reg [7:0] byte2;
+reg [7:0] byte3;
+reg [7:0] mux_byte0;
+reg [7:0] mux_byte1;
+reg [7:0] mux_byte2;
+reg [7:0] mux_byte3;
+reg lbyte;
+reg lhalf;
+reg lword;
 
 always @(posedge clk) begin
     

@@ -1,0 +1,252 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000193db577be0 .scope module, "branch_tb" "branch_tb" 2 4;
+ .timescale -9 -12;
+v00000193db574400_0 .var "binst_tb", 0 0;
+v00000193db5744a0_0 .var "func3_tb", 2 0;
+v00000193db574540_0 .var "jal_tb", 0 0;
+v00000193db5745e0_0 .net "mux_res_tb", 0 0, v00000193db577f00_0;  1 drivers
+v00000193db574680_0 .net "pcjump_tb", 0 0, v00000193db577fa0_0;  1 drivers
+v00000193db574720_0 .var "rs1data_tb", 31 0;
+v00000193db5747c0_0 .net "rs1pc_tb", 0 0, v00000193db5742c0_0;  1 drivers
+v00000193db574860_0 .var "rs2data_tb", 31 0;
+S_00000193db577d70 .scope module, "dut" "branch" 2 17, 3 1 0, S_00000193db577be0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "rs1data";
+    .port_info 1 /INPUT 32 "rs2data";
+    .port_info 2 /INPUT 3 "func3";
+    .port_info 3 /INPUT 1 "binst";
+    .port_info 4 /INPUT 1 "jal";
+    .port_info 5 /OUTPUT 1 "pcjump";
+    .port_info 6 /OUTPUT 1 "rs1pc";
+    .port_info 7 /OUTPUT 1 "mux_res";
+v00000193db5434f0_0 .net "binst", 0 0, v00000193db574400_0;  1 drivers
+v00000193db543120_0 .net "func3", 2 0, v00000193db5744a0_0;  1 drivers
+v00000193db52bd30_0 .net "jal", 0 0, v00000193db574540_0;  1 drivers
+v00000193db577f00_0 .var "mux_res", 0 0;
+v00000193db577fa0_0 .var "pcjump", 0 0;
+v00000193db574220_0 .net "rs1data", 31 0, v00000193db574720_0;  1 drivers
+v00000193db5742c0_0 .var "rs1pc", 0 0;
+v00000193db574360_0 .net "rs2data", 31 0, v00000193db574860_0;  1 drivers
+E_00000193db566ca0/0 .event anyedge, v00000193db543120_0, v00000193db574220_0, v00000193db574360_0, v00000193db5434f0_0;
+E_00000193db566ca0/1 .event anyedge, v00000193db577f00_0, v00000193db52bd30_0, v00000193db5742c0_0;
+E_00000193db566ca0 .event/or E_00000193db566ca0/0, E_00000193db566ca0/1;
+    .scope S_00000193db577d70;
+T_0 ;
+    %wait E_00000193db566ca0;
+    %load/vec4 v00000193db543120_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 3;
+    %cmp/u;
+    %jmp/1 T_0.0, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 3;
+    %cmp/u;
+    %jmp/1 T_0.1, 6;
+    %dup/vec4;
+    %pushi/vec4 4, 0, 3;
+    %cmp/u;
+    %jmp/1 T_0.2, 6;
+    %dup/vec4;
+    %pushi/vec4 5, 0, 3;
+    %cmp/u;
+    %jmp/1 T_0.3, 6;
+    %dup/vec4;
+    %pushi/vec4 6, 0, 3;
+    %cmp/u;
+    %jmp/1 T_0.4, 6;
+    %dup/vec4;
+    %pushi/vec4 7, 0, 3;
+    %cmp/u;
+    %jmp/1 T_0.5, 6;
+    %jmp T_0.6;
+T_0.0 ;
+    %load/vec4 v00000193db574220_0;
+    %load/vec4 v00000193db574360_0;
+    %cmp/e;
+    %flag_mov 8, 4;
+    %jmp/0 T_0.7, 8;
+    %pushi/vec4 1, 0, 1;
+    %jmp/1 T_0.8, 8;
+T_0.7 ; End of true expr.
+    %pushi/vec4 0, 0, 1;
+    %jmp/0 T_0.8, 8;
+ ; End of false expr.
+    %blend;
+T_0.8;
+    %store/vec4 v00000193db577f00_0, 0, 1;
+    %jmp T_0.6;
+T_0.1 ;
+    %load/vec4 v00000193db574220_0;
+    %load/vec4 v00000193db574360_0;
+    %cmp/ne;
+    %flag_mov 8, 4;
+    %jmp/0 T_0.9, 8;
+    %pushi/vec4 1, 0, 1;
+    %jmp/1 T_0.10, 8;
+T_0.9 ; End of true expr.
+    %pushi/vec4 0, 0, 1;
+    %jmp/0 T_0.10, 8;
+ ; End of false expr.
+    %blend;
+T_0.10;
+    %store/vec4 v00000193db577f00_0, 0, 1;
+    %jmp T_0.6;
+T_0.2 ;
+    %load/vec4 v00000193db574220_0;
+    %load/vec4 v00000193db574360_0;
+    %cmp/s;
+    %flag_mov 8, 5;
+    %jmp/0 T_0.11, 8;
+    %pushi/vec4 1, 0, 1;
+    %jmp/1 T_0.12, 8;
+T_0.11 ; End of true expr.
+    %pushi/vec4 0, 0, 1;
+    %jmp/0 T_0.12, 8;
+ ; End of false expr.
+    %blend;
+T_0.12;
+    %store/vec4 v00000193db577f00_0, 0, 1;
+    %jmp T_0.6;
+T_0.3 ;
+    %load/vec4 v00000193db574360_0;
+    %load/vec4 v00000193db574220_0;
+    %cmp/s;
+    %flag_or 5, 4;
+    %flag_mov 8, 5;
+    %jmp/0 T_0.13, 8;
+    %pushi/vec4 1, 0, 1;
+    %jmp/1 T_0.14, 8;
+T_0.13 ; End of true expr.
+    %pushi/vec4 0, 0, 1;
+    %jmp/0 T_0.14, 8;
+ ; End of false expr.
+    %blend;
+T_0.14;
+    %store/vec4 v00000193db577f00_0, 0, 1;
+    %jmp T_0.6;
+T_0.4 ;
+    %load/vec4 v00000193db574220_0;
+    %load/vec4 v00000193db574360_0;
+    %cmp/u;
+    %flag_mov 8, 5;
+    %jmp/0 T_0.15, 8;
+    %pushi/vec4 1, 0, 1;
+    %jmp/1 T_0.16, 8;
+T_0.15 ; End of true expr.
+    %pushi/vec4 0, 0, 1;
+    %jmp/0 T_0.16, 8;
+ ; End of false expr.
+    %blend;
+T_0.16;
+    %store/vec4 v00000193db577f00_0, 0, 1;
+    %jmp T_0.6;
+T_0.5 ;
+    %load/vec4 v00000193db574360_0;
+    %load/vec4 v00000193db574220_0;
+    %cmp/u;
+    %flag_or 5, 4;
+    %flag_mov 8, 5;
+    %jmp/0 T_0.17, 8;
+    %pushi/vec4 1, 0, 1;
+    %jmp/1 T_0.18, 8;
+T_0.17 ; End of true expr.
+    %pushi/vec4 0, 0, 1;
+    %jmp/0 T_0.18, 8;
+ ; End of false expr.
+    %blend;
+T_0.18;
+    %store/vec4 v00000193db577f00_0, 0, 1;
+    %jmp T_0.6;
+T_0.6 ;
+    %pop/vec4 1;
+    %load/vec4 v00000193db5434f0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.19, 8;
+    %load/vec4 v00000193db577f00_0;
+    %store/vec4 v00000193db5742c0_0, 0, 1;
+    %jmp T_0.20;
+T_0.19 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000193db5742c0_0, 0, 1;
+T_0.20 ;
+    %load/vec4 v00000193db52bd30_0;
+    %load/vec4 v00000193db5742c0_0;
+    %or;
+    %flag_set/vec4 8;
+    %jmp/0 T_0.21, 8;
+    %pushi/vec4 1, 0, 1;
+    %jmp/1 T_0.22, 8;
+T_0.21 ; End of true expr.
+    %pushi/vec4 0, 0, 1;
+    %jmp/0 T_0.22, 8;
+ ; End of false expr.
+    %blend;
+T_0.22;
+    %store/vec4 v00000193db577fa0_0, 0, 1;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_00000193db577be0;
+T_1 ;
+    %vpi_call 2 30 "$dumpfile", "branch.vcd" {0 0 0};
+    %vpi_call 2 31 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000193db577be0 {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000193db574720_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000193db574860_0, 0, 32;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v00000193db5744a0_0, 0, 3;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000193db574400_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000193db574540_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 17, 0, 32;
+    %store/vec4 v00000193db574720_0, 0, 32;
+    %pushi/vec4 257, 0, 32;
+    %store/vec4 v00000193db574860_0, 0, 32;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v00000193db5744a0_0, 0, 3;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000193db574400_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000193db574540_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1048577, 0, 32;
+    %store/vec4 v00000193db574720_0, 0, 32;
+    %pushi/vec4 65536, 0, 32;
+    %store/vec4 v00000193db574860_0, 0, 32;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v00000193db5744a0_0, 0, 3;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000193db574400_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000193db574540_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 4294967294, 0, 32;
+    %store/vec4 v00000193db574720_0, 0, 32;
+    %pushi/vec4 1, 0, 32;
+    %store/vec4 v00000193db574860_0, 0, 32;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v00000193db5744a0_0, 0, 3;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000193db574400_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000193db574540_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 68 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "branch_tb.v";
+    "./branch.v";

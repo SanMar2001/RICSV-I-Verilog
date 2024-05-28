@@ -3,23 +3,22 @@ module alu (
     input [31:0] op2,
     input [2:0] func3,
     input [6:0] func7,
-    output reg [31:0] add_result,
-    output reg [31:0] sub_result,
-    output reg [31:0] xor_result,
-    output reg [31:0] or_result,
-    output reg [31:0] and_result,
-    output reg [31:0] shift_left_result,
-    output reg [31:0] shift_right_result,
-    output reg [31:0] signed_shift_right_result,
-    output reg [31:0] signed_compare_result,
-    output reg [31:0] unsigned_compare_result,
-    output reg func7_result,
-    output reg [31:0] addsub_result,
-    output reg [31:0] srlsra_result,
     output reg [31:0] out
 );
+    reg [31:0] add_result;
+    reg [31:0] sub_result;
+    reg [31:0] xor_result;
+    reg [31:0] or_result;
+    reg [31:0] and_result;
+    reg [31:0] shift_left_result;
+    reg [31:0] shift_right_result;
+    reg [31:0] signed_shift_right_result;
+    reg [31:0] signed_compare_result;
+    reg [31:0] unsigned_compare_result;
+    reg func7_result;
+    reg [31:0] addsub_result;
+    reg [31:0] srlsra_result;
 
-    // Suma
     always @* begin
         add_result = op1 + op2;
         sub_result = op1 - op2;
