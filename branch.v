@@ -5,11 +5,11 @@ module branch(
     input binst,
     input jal,
     output reg pcjump,
-    output reg rs1pc,
+    output reg rs1pc
     
 );
 
-reg mux_res
+reg mux_res;
 
 always @* begin
     case(func3)

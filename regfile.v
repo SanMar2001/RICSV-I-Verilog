@@ -1,17 +1,17 @@
-module register_file (
+module regfile (
     input enable,
     input [4:0] rdAdrs,
     input [31:0] rdData,
     input [4:0] rs1Adrs,
     input [4:0] rs2Adrs,
-    input clock,
+    input clk,
     output reg [31:0] rs1Data,
     output reg [31:0] rs2Data
 );
 
   reg [31:0] registers [0:31];
 
-  always @(posedge clock) begin
+  always @(posedge clk) begin
     if (enable && (rdAdrs != 5'b00000)) begin
       registers[rdAdrs] <= rdData;
     end

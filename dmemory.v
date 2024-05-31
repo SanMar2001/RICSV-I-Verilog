@@ -4,7 +4,7 @@ module dmemory (
     input [31:0] wdata,
     input dmwen,
     input [31:0] addr,
-    output reg [31:0] out      // Datos de salida
+    output reg [31:0] dmout      // Datos de salida
 );
 
 reg [7:0] memory0 [0:(1<<24)-1];
@@ -75,7 +75,7 @@ always @(posedge clk) begin
         mux_byte3 = 8'b0;
     end
 
-    out = {mux_byte3, mux_byte2, mux_byte1, mux_byte0};
+    dmout = {mux_byte3, mux_byte2, mux_byte1, mux_byte0};
 
 end
 

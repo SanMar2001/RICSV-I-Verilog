@@ -1,5 +1,5 @@
 module instdec (
-    input [31:0] inst,
+    input  [31:0] inst,
     output reg [6:0] opcode,
     output reg [4:0] rd,
     output reg [2:0] func3,

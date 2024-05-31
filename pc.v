@@ -1,7 +1,7 @@
 module pc (
     input wire [31:0] input_data,
     input wire enable,
-    input wire [31:0] reset,
+    input wire reset,
     input wire clk,
     output wire [31:0] output_data
 );
@@ -27,4 +27,3 @@ module pc (
     assign output_data = reg_output;
 
 endmodule
-
